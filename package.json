@@ -1,0 +1,35 @@
+{
+  "name": "sejuta-cita",
+  "version": "1.0.0",
+  "description": "This project is coding test for backend engineer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Amzar123/CRUD-NodeJs.git"
+  },
+  "keywords": [
+    "CRUD"
+  ],
+  "author": "Aji Muhammad Zapar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Amzar123/CRUD-NodeJs/issues"
+  },
+  "homepage": "https://github.com/Amzar123/CRUD-NodeJs#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.1",
+    "dotenv": "^14.3.2",
+    "express": "^4.17.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.1.8",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.15",
+    "passport": "^0.5.2",
+    "passport-jwt": "^4.0.0"
+  }
+}

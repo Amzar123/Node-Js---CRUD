@@ -1,0 +1,34 @@
+version : "3.7"
+
+services:
+  mongo:
+    container_name: mongoDb
+    image: mongo:latest
+    restart: always
+    volumes:
+      - mongo_db:/data/db
+
+    ports:
+      - 27017:27017
+    # networks:
+    #   - crud_network
+
+  crud-nodejs:
+    build: .
+    container_name: crud-nodejs
+    image: crud-nodejs:1.0
+    restart: always
+    ports:
+      - 3000:3000
+    depends_on:
+      - mongo
+    environment:
+      - MONGODB_URI=mongodb://mongo:27017/sejuta-cita
+      - PORT=3000
+      - ACCESS_TOKEN_SECRET='!access^token*secret'
+      - REFRESH_TOKEN_SECRET='!refresh%token@secret'
+      - ACCESS_TOKEN_EXPIRE_TIME=2h
+      - REFRESH_TOKEN_EXPIRE_TIME=2d  
+
+volumes:
+  mongo_db: {}

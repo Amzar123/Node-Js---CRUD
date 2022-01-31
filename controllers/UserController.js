@@ -1,4 +1,5 @@
 const UserObj = require('../models/model')
+const bcrypt = require('bcryptjs')
 
 //READ
 const index = (req,res,next)=>{
@@ -18,20 +19,30 @@ const index = (req,res,next)=>{
 
 //CREATE 
 const store = (req,res,next) => {
-    let user = new UserObj({
-        nama : req.body.nama,
-        alamat: req.body.alamat
-    })
+    bcrypt.hash(req.body.password, 10, function(err, hashedPass){
+        if (err){
+            res.json({
+                error:err
+            })
+        }
 
-    user.save()
-    .then(response => {
-        res.json({
-            message : 'user berhasil disimpan'
+        let user = new UserObj({
+            nama: req.body.nama,
+            username: req.body.username,
+            alamat : req.body.alamat,
+            password: hashedPass,
+            role:req.body.role
         })
-    })
-    .catch(error => {
-        res.json({
-            message: 'terjadi error'
+        user.save()
+        .then(user => {
+            res.json({
+                message: 'user berhasil registrasi'
+            })
+        })
+        .catch(error => {
+            res.json({
+                message : 'terjadi error'
+            })
         })
     })
 }
@@ -41,7 +52,10 @@ const updateUser = (req,res,next)=>{
     let userId = req.body.userId
     let updateData = {
         nama : req.body.nama,
-        alamat : req.body.alamat
+        alamat : req.body.alamat,
+        username : req.body.username, 
+        password : req.body.password,
+        role : req.body.role
     }
 
     UserObj.findByIdAndUpdate(userId, {$set: updateData})

@@ -1,6 +1,7 @@
 FROM node:16.13.2
 
 # Create app directory
+RUN mkdir -p /usr/src/app/run
 WORKDIR /usr/src/app
 
 # Install app dependencies
@@ -16,4 +17,4 @@ RUN npm install
 COPY . .
 
 EXPOSE 8080
-CMD [ "node", "run","dev" ]
+CMD [ "npm", "run","dev" ]

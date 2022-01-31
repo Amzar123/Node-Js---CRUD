@@ -15,8 +15,7 @@ services:
 
   crud-nodejs:
     build: .
-    container_name: crud-nodejs
-    image: crud-nodejs:1.0
+    # container_name: crud-nodejs
     restart: always
     ports:
       - 3000:3000

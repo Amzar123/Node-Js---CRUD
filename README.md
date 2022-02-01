@@ -123,7 +123,10 @@ _Dibawah ini merupakan langkah - langkah untuk menginstall aplikasi._
   
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-### Kredential admin 
+
+<!-- GETTING STARTED -->
+## Kredential Admin
+
 1. Username
    ```sh
    admin

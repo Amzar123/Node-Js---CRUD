@@ -36,8 +36,12 @@ Run Project pada minikube
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
+        <li><a href="#Run project secara local">Run project secara local</a></li>
+        <li><a href="#Run project menggunakan docker">Run project menggunakan docker</a></li>
+        <li><a href="#Deploy docker image ke kubernetes">Deploy docker image ke kubernetes</a></li>
       </ul>
     </li>
+    <li><a href="#Kredential Admin">Kredential Admin</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>

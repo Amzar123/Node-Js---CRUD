@@ -10,12 +10,9 @@ services:
 
     ports:
       - 27017:27017
-    # networks:
-    #   - crud_network
 
   crud-nodejs:
     build: .
-    # container_name: crud-nodejs
     restart: always
     ports:
       - 3000:3000

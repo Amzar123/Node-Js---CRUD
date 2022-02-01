@@ -36,12 +36,12 @@ const store = (req,res,next) => {
         user.save()
         .then(user => {
             res.json({
-                message: 'user berhasil registrasi'
+                message: 'User berhasil ditambahkan'
             })
         })
         .catch(error => {
             res.json({
-                message : 'terjadi error'
+                message : error
             })
         })
     })
@@ -66,7 +66,7 @@ const updateUser = (req,res,next)=>{
     })
     .catch(error => {
         res.json({
-            message: 'terjadi error'
+            message: error
         })
     })
 }
@@ -82,7 +82,7 @@ const deleteUser = (req,res,next)=>{
     })
     .catch(error => {
         res.json({
-            message: 'terjadi error'
+            message: error
         })
     })
 }

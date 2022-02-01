@@ -13,7 +13,7 @@ const login = (req,res,next)=>{
         let refreshtoken = jwt.sign({username: username, role:"admin"}, process.env.REFRESH_TOKEN_SECRET , {expiresIn:process.env.REFRESH_TOKEN_EXPIRE_TIME})
 
         res.json({
-            message: 'Login sukses',
+            message: 'Berhasil masuk',
             username: username, 
             role: "admin",
             token: token,
@@ -34,7 +34,7 @@ const login = (req,res,next)=>{
                         let refreshtoken = jwt.sign({nama : user.nama, username: user.username, role:user.role}, process.env.REFRESH_TOKEN_SECRET , {expiresIn:process.env.REFRESH_TOKEN_EXPIRE_TIME})
 
                         res.json({
-                            message: 'Login sukses',
+                            message: 'Berhasil masuk',
                             nama : user.nama, 
                             username: user.username, 
                             role:user.role,
@@ -43,7 +43,7 @@ const login = (req,res,next)=>{
                         })
                     }else{
                         res.status(200).json({
-                            message: 'password salah'
+                            message: 'kata sandi salah'
                         })
                     }
                 })

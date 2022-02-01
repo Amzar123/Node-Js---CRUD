@@ -1,11 +1,11 @@
 {
   "name": "sejuta-cita",
   "version": "1.0.0",
-  "description": "This project is coding test for backend engineer",
+  "description": "This project is coding test for backend engineer at sejuta cita",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon server.js"
+    "dev": "nodemon app.js"
   },
   "repository": {
     "type": "git",

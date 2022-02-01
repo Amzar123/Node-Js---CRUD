@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: crud-service
+spec:
+  selector:
+    app: crud-nodejs
+  type: NodePort
+  ports:
+    - protocol: TCP
+      port: 3000
+      targetPort: nodeport

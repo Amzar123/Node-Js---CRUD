@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: crud-nodejs
+  labels: 
+    env: dev
+    app: crud-nodejs
+spec: 
+  containers:
+    - name : crud-nodejs
+      image: amzar123/crud-nodejs:1.0
+      ports: 
+        - name: nodeport
+          containerPort: 3000

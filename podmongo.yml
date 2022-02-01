@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mongo
+  labels: 
+    env: dev
+    app: mongo
+spec: 
+  containers:
+    - name : mongo
+      image: mongo:latest
+      ports: 
+        - name: mongoport
+          containerPort: 27017

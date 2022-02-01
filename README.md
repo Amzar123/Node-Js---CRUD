@@ -138,9 +138,15 @@ _Dibawah ini merupakan langkah - langkah untuk menginstall aplikasi._
   
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-### Kredential admin
-username : admin
-password : admin123
+### Kredential admin 
+1. Username
+   ```sh
+   admin
+   ```
+2. Password
+   ```sh
+   admin123
+   ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

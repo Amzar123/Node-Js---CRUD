@@ -71,8 +71,6 @@ Run Project pada minikube
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
 Project ini merupakan project CRUD dan login user dengan dengan menggunakan user token yaitu jwt 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -99,7 +97,8 @@ Sebelum menjalankan project ini pastikan sudah memiliki aplikasi mongodb server 
 
 ### Installation
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+_Dibawah ini merupakan langkah - langkah untuk menginstall aplikasi._
+#### Run project secara local
 
 1. Clone the repo
    ```sh
@@ -114,6 +113,20 @@ _Below is an example of how you can instruct your audience on installing and set
    npm run dev
    ```
    
+#### Run project menggunakan docker 
+1. Clone the repo
+   ```sh
+   git clone https://github.com/Amzar123/CRUD-NodeJs.git
+   ```
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+3. Jalankan project
+   ```sh
+   docker-compose.up
+   ```
+ 
   
 <p align="right">(<a href="#top">back to top</a>)</p>
 

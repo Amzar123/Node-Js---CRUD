@@ -12,3 +12,5 @@ spec:
       ports: 
         - name: nodeport
           containerPort: 3000
+  imagePullSecrets:
+    - name: registrypullsecret

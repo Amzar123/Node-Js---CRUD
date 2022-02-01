@@ -65,23 +65,22 @@ const store = (req,res,next) => {
 //UPDATE
 const updateUser = (req,res,next)=>{
 
-    let userId = req.body.userId
-
     bcrypt.hash(req.body.password, 10, function(err, hashedPass){
         if (err){
             res.json({
                 error:err
             })
         }
-
-        let UserObj = new UserObj({
+        let userId = req.body.userId
+        
+        let user = new UserObj({
             nama: req.body.nama,
             username: req.body.username,
             alamat : req.body.alamat,
             password: hashedPass,
             role:req.body.role
         })
-        UserObj.findByIdAndUpdate(userId, {$set: updateData})
+        UserObj.findByIdAndUpdate(userId, {$set: user})
         .then(()=>{
             res.json({
                 message: 'user berhasil di update'

@@ -1,5 +1,4 @@
-##Akun admin
-kredential admin
+Kredential admin
 username : admin
 password : admin123
 

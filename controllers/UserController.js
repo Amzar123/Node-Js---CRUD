@@ -71,9 +71,11 @@ const updateUser = (req,res,next)=>{
                 error:err
             })
         }
-        let userId = req.body.userId
+        else{
+            let userId = req.body.userId
         
         let user = new UserObj({
+            _id:req.body.userId,
             nama: req.body.nama,
             username: req.body.username,
             alamat : req.body.alamat,
@@ -91,6 +93,7 @@ const updateUser = (req,res,next)=>{
                 message: error
             })
         })
+        }
     })
 }
 

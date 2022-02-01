@@ -1,7 +1,3 @@
-Kredential admin
-username : admin
-password : admin123
-
 Running project 
 1. Pastikan mongodb server sudah berjalan
 2. clonse repository
@@ -126,9 +122,28 @@ _Dibawah ini merupakan langkah - langkah untuk menginstall aplikasi._
    ```sh
    docker-compose.up
    ```
- 
+ #### Deploy docker image ke kubernetes
+ 1. Clone the repo
+   ```sh
+   git clone https://github.com/Amzar123/CRUD-NodeJs.git
+   ```
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+3. Jalankan project
+   ```sh
+   docker-compose.up
+   ```
   
 <p align="right">(<a href="#top">back to top</a>)</p>
+
+### Kredential admin
+username : admin
+password : admin123
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 
 
 <!-- ACKNOWLEDGMENTS -->

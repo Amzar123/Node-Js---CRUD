@@ -107,7 +107,7 @@ _Dibawah ini merupakan langkah - langkah untuk menginstall aplikasi._
    docker-compose.up
    ```
  #### Deploy docker image ke kubernetes
- 1. Clone the repo
+1. Clone the repo
    ```sh
    git clone https://github.com/Amzar123/CRUD-NodeJs.git
    ```
@@ -115,11 +115,34 @@ _Dibawah ini merupakan langkah - langkah untuk menginstall aplikasi._
    ```sh
    npm install
    ```
-3. Jalankan project
+3. Ambil kode yang akan digenerate
    ```sh
-   docker-compose.up
+   cat ~/.docker/config.json | base64 -w0
    ```
-  
+4. Copy kode yang digenerate ke my-secret.yml file
+5. Buat source secret pada kubernetes
+   ```sh
+   kubectl create -f my-secret.yaml && kubectl get secrets
+   ```
+6. Buat pod curd-nodejs
+   ```sh
+   kubectl create -f podcrud_nodejs.yml
+   ```
+7. Buat service curd-nodejs
+   ```sh
+   kubectl create -f servicecrud.yml
+   ```
+8. Buat pod mongodb
+   ```sh
+   kubectl create -f podmongo.yml
+   ```
+
+9. Buat service mongodb
+   ```sh
+   kubectl create -f servicemongo.yml
+   ```
+
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
